@@ -1,1 +1,257 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* Importing Fonts */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm0K0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Caveat Bold'), local('Caveat-Bold'), url(https://fonts.gstatic.com/s/caveat/v7/Wnz5HAc5bAfYB2Qz3RM9og.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v9/Fh4uPib9Iyv2ucM6pGQMWimMp004Hao.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3aPw.ttf) format('truetype');
+}
+/* VARIABLES */
+.headers-style {
+  padding: 0px 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.6rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.headers-style-2 {
+  padding: 0px 70px;
+  font-family: 'Anton', sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2.5rem;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 300px;
+  background-image: linear-gradient(dodgerblue, lightseagreen);
+  border-bottom: 1px solid chocolate;
+}
+header h1 {
+  padding: 0px 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.6rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 4rem;
+  color: dodgerblue;
+}
+header h2 {
+  padding: 0px 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.6rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 6rem;
+  color: lightseagreen;
+}
+header h3 {
+  padding: 0px 70px;
+  font-family: 'Anton', sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: lightseagreen;
+}
+header h4 {
+  padding: 0px 70px;
+  font-family: 'Anton', sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: dodgerblue;
+}
+.nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+  border-bottom: 1px solid chocolate;
+}
+.nav-bar .item a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+}
+.nav-bar .item a:hover {
+  text-decoration: underline;
+  color: chocolate;
+}
+section {
+  border-bottom: 1px solid chocolate;
+}
+.intro ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.intro ul li {
+  padding-right: 10px;
+  display: flex;
+  flex-flow: column;
+}
+.intro ul li h5 {
+  font-size: 1.2rem;
+  font-weight: 1.5rem;
+}
+.intro ul li p {
+  padding: 20px 0px 0px 0xp;
+}
+footer {
+  height: 150px;
+  background-color: lightseagreen;
+}
