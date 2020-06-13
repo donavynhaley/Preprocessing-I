@@ -1,1 +1,398 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Importing Fonts */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm0K0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Caveat Bold'), local('Caveat-Bold'), url(https://fonts.gstatic.com/s/caveat/v7/Wnz5HAc5bAfYB2Qz3RM9og.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v9/Fh4uPib9Iyv2ucM6pGQMWimMp004Hao.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3aPw.ttf) format('truetype');
+}
+/* VARIABLES */
+.headers-style {
+  padding: 0px 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.6rem;
+  color: white;
+}
+.headers-style-2 {
+  padding: 0px 70px;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.content-format {
+  display: flex;
+}
+.content-format ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.content-format ul li {
+  padding-right: 30px;
+  display: flex;
+  flex-flow: column ;
+  margin: 20px 0px;
+  justify-content: space-between;
+}
+.content-format ul li h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.content-format ul li p {
+  margin: 10px 0px;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2.5rem;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 300px;
+  background-color: #57b0b5;
+}
+header h1 {
+  padding: 0px 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.6rem;
+  color: white;
+  font-size: 2rem;
+}
+header h2 {
+  padding: 0px 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.6rem;
+  color: white;
+  font-size: 6rem;
+}
+header h3 {
+  padding: 0px 70px;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+header h4 {
+  padding: 0px 70px;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  letter-spacing: 0.2rem;
+  color: #7884b6;
+}
+header .top-header {
+  margin: 30px 0px 0px 0px;
+}
+header .bottom-header {
+  margin-bottom: 30px;
+}
+.nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+  border-bottom: 1px dashed #bec08f;
+}
+.nav-bar .item a {
+  text-decoration: none;
+  color: #bec08f;
+  font-size: 1.4rem;
+}
+.nav-bar .item a:hover {
+  text-decoration: underline;
+  color: #bebab9;
+}
+section {
+  border-bottom: 1px dashed #bec08f;
+}
+section h2 {
+  color: #57b0b5;
+  margin-right: 40%;
+}
+.intro {
+  display: flex;
+}
+.intro ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.intro ul li {
+  padding-right: 30px;
+  display: flex;
+  flex-flow: column ;
+  margin: 20px 0px;
+  justify-content: space-between;
+}
+.intro ul li h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.intro ul li p {
+  margin: 10px 0px;
+}
+.work-history {
+  display: flex;
+}
+.work-history ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.work-history ul li {
+  padding-right: 30px;
+  display: flex;
+  flex-flow: column ;
+  margin: 20px 0px;
+  justify-content: space-between;
+}
+.work-history ul li h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.work-history ul li p {
+  margin: 10px 0px;
+}
+.work-history ul li span {
+  margin: 0px;
+}
+.work-history ul h2 {
+  margin-right: 10%;
+}
+.work-history ul li h6 {
+  margin: 10px;
+  font-weight: bold;
+}
+.work-history ul li h5 {
+  margin: 20px 0px;
+}
+.work-history span {
+  display: flex;
+  flex-flow: row wrap;
+}
+.skills {
+  display: flex;
+}
+.skills ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.skills ul li {
+  padding-right: 30px;
+  display: flex;
+  flex-flow: column ;
+  margin: 20px 0px;
+  justify-content: space-between;
+}
+.skills ul li h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.skills ul li p {
+  margin: 10px 0px;
+}
+.skills li div {
+  margin: 10px 0px;
+}
+.skills .bar {
+  color: black;
+  background-color: #7884b6;
+  width: 200px;
+  height: 10px;
+  border-radius: 4px solid;
+  display: flex;
+  flex-flow: row;
+}
+.skills .bar #html {
+  background-color: #57b0b5;
+  width: 150px;
+  height: 10px;
+}
+footer ul {
+  height: 100px;
+  background-color: #57b0b5;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+footer ul li {
+  margin-top: 20px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer ul li a:hover {
+  color: #e07a88;
+}
